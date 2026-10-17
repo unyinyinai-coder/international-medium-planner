@@ -71,4 +71,13 @@ async function loadCloudReviews(){if(!session)return;await refreshToken();const 
 const fetchBtn=document.createElement('button');fetchBtn.type='button';fetchBtn.className='secondary';fetchBtn.textContent='Fetch submitted cloud plans';fetchBtn.onclick=()=>loadCloudReviews().then(n=>alert('Fetched '+n+' new cloud plan(s). Admin permissions required.')).catch(e=>alert('Cloud review unavailable: '+e.message));$('adminImport').parentElement.parentElement.append(fetchBtn);
 showCloudStatus();
 
-</script></body></html>
+</script>
+<a href="school-dashboard.html"
+   style="display:inline-block;padding:12px 20px;
+   background:#166534;color:white;
+   border-radius:8px;text-decoration:none;
+   margin:15px;">
+  Open School Dashboard
+</a>
+</body>
+</html>
