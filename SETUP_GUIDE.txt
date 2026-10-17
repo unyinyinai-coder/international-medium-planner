@@ -1,0 +1,24 @@
+VERSION 5 - EASY START
+
+A. OFFLINE TEST (NO ACCOUNT NEEDED)
+1. Extract ZIP on Android or computer.
+2. Open index.html in Chrome/Edge.
+3. Create a Daily or Weekly plan, Save, then Export Backup.
+4. On another device, Import Backup to transfer plans.
+
+B. REAL ONLINE SYNC (ADMIN SETUP REQUIRED)
+1. Create a Supabase project at https://supabase.com.
+2. In SQL Editor run setup.sql.
+3. In Authentication create teacher and school leader users. Disable public sign-ups if not needed.
+4. In SQL Editor set the leader account role to admin (see setup.sql).
+5. Upload the contents of this folder to a static HTTPS website (for example Cloudflare Pages or Netlify). Use the same website URL on phone and computer.
+6. In Cloud Sync enter the Supabase project URL and PUBLISHABLE/ANON key (never secret/service_role). Sign in.
+7. Teachers save plans while signed in; when online, Sync now or automatic retry after reconnect.
+8. Leader signs in on the HTTPS site, goes to School Leader and selects Fetch submitted cloud plans.
+
+LIMITATIONS OF THIS PILOT
+- No automatic approval return sync yet: export review decisions JSON and share back to teachers.
+- Offline browser storage can be lost; keep backup files.
+- One device at a time per account is recommended to avoid conflicting edits.
+- Cloud login and service workers do not work reliably from content:// or file://.
+- For real production use, add conflict resolution, reliable IndexedDB queue, backups, admin workflow, and security testing.
